@@ -4,15 +4,25 @@ body{
 }
 
 .logo{
-    position: absolute;
     margin: 40px 0 0 40px;
 }
 
+.container{
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+}
+
+.input{
+    width: 60%;
+    text-align: center;
+}
+
 .input-texto{
-    position: absolute;
-    margin: 168px 0 0 240px;
+    margin-top: 50px;
+    justify-content: center;
     resize: none;
-    width: 577px;
+    width: 90%;
     height: 480px;
     border:none;
     background:#F3F5FC;
@@ -21,7 +31,7 @@ body{
     font-size: 32px;
     line-height: 48px;
     color: #0A3871;
-        
+    outline: none;
 }
 
 .input-texto::placeholder{
@@ -32,89 +42,8 @@ body{
     line-height: 48px;
 }
 
-.box-encriptado{
-    display: none;
-}
-.texto-encriptado{
-    position: absolute;
-    margin: 40px 0 0 1300px;
-    padding: 25px;
-    width: 400px;
-    height: 860px;
-    background: #FFFFFF;
-    border: none;
-    border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px #00000014;
-    resize: none;
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #495057;
-}
-
-
-
-.box-informacion{
-    
-}
-
-.info-default{
-    position: absolute;
-    margin: 40px 0 0 1300px;
-    width: 500px;
-    height: 860px;
-    background: #FFFFFF;
-    border: none;
-    border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px #00000014;
-}
-
-.info-default h2{
-    width: 336px;
-    padding-top: 32px;
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #343A40;
-}
-
-.info-default p{
-    width: 336px;
-    padding-top: 16px;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #495057;
-}
-
-.boton-copiar{
-    position: absolute;
-    width: 336px;
-    height: 67px;
-    margin: 800px 0 0 1332px;
-    border-radius: 24px;
-    border: 1px solid #0A3871 ;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #0A3871;
-}
-
 .minusculas{
-    position: absolute;
-    margin: 766px 0 0 240px;
+    margin-top: 20px;
     font-family: 'Inter';
     font-weight: 400;
     color:#495057;
@@ -122,13 +51,16 @@ body{
     line-height: 18px;
     opacity: 80%;
     gap: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .botones{
-    position: absolute;
+    margin: 20px 0;
     display: flex;
-    margin: 800px 0 0 240px;
     gap: 24px;
+    justify-content: center;
+    
 }
 
 .boton-encriptar{
@@ -160,6 +92,88 @@ body{
     border: none;
     background: #D8DFE8;
     border: 1px solid #0A3871;
+}
+
+.box-informacion{
+    width: 25%;
+    justify-content: center;
+
+}
+
+.texto-imagen{
+    justify-content: center;
+    padding: 25px;
+    width: 80%;
+    height: 600px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    text-align: center;
+    display: inline-block;
+}
+
+.texto-imagen h2{
+    padding: 20px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #343A40;
+}
+
+.texto-imagen p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #495057;
+    display: block;
+}
+
+.imagen-muneco{
+    width: 95%;
+}
+
+.box-encriptado{
+    display: none;
+}
+.texto-encriptado{
+    padding: 25px;
+    width: 80%;
+    height: 600px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    resize: none;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #495057;
+}
+
+
+.boton-copiar{
+    margin-top: 20px;
+    width: 336px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid #0A3871 ;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0A3871;
 }
 
 

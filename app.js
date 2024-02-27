@@ -55,7 +55,7 @@ function desencriptar() {
 
 function habilitar() {
     var elemento = document.querySelector('.box-encriptado');
-    var elemento2 = document.querySelector('.box-informacion');
+    var elemento2 = document.querySelector('.texto-imagen');
 
     var res = window.getComputedStyle(elemento2).display;
 

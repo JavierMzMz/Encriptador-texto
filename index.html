@@ -17,28 +17,29 @@
     </header>
 
     <main>
-        <div>
-            <textarea class="input-texto" placeholder="Ingrese el texto aqui" id="boton-encriptar"></textarea>
-        </div>
-        <section class="box-informacion">
-            <div class="info-default">
-                <img class="imagenes-muneco" src="imagenes/muneco.png">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>                                 
-        </section>
-        <div class="box-encriptado">
-            <textarea class="texto-encriptado" id="texto-encriptado" readonly></textarea>
-            <button onclick="" class="boton-copiar">Copiar</button>
-        </div>
+        <div class="container">
+            <section class="input">
+                <textarea class="input-texto" placeholder="Ingrese el texto aqui" id="boton-encriptar"></textarea>
+                <p class="minusculas">&#10071 Solo letras minúsculas y sin acentos</p>
+                <div class="botones">
+                    <button onclick="encriptar();" class="boton-encriptar">Encriptar</button>
+                    <button onclick="desencriptar()" class="boton-desencriptar">Desencriptar</button>
+                </div>
+            </section>          
         
-        <p class="minusculas">&#10071 Solo letras minúsculas y sin acentos</p>
-
-        <div class="botones">
-            <button onclick="encriptar();" class="boton-encriptar">Encriptar</button>
-            <button onclick="desencriptar()" class="boton-desencriptar">Desencriptar</button>
-        </div>
-
+            <section class="box-informacion">
+                <div class="texto-imagen">
+                    <img class="imagen-muneco" src="imagenes/muneco.png">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>                                 
+        
+                <div class="box-encriptado">
+                    <textarea class="texto-encriptado" readonly></textarea>
+                    <button onclick="" class="boton-copiar">Copiar</button>
+                </div>
+            </section>
+        </div>  
     </main>
 
     <script src="app.js"></script>
