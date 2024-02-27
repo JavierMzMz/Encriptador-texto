@@ -18,27 +18,30 @@
 
     <main>
         <div>
-            <textarea class="input-texto" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea class="input-texto" placeholder="Ingrese el texto aqui" id="boton-encriptar"></textarea>
         </div>
-        <div>
-            <textarea class="texto-encriptado"></textarea>
-            <ul class="informacion-default">
-                <li>
-                    <img class="imagenes-muneco" src="imagenes/muneco.png">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>                   
-                </li>
-            </ul>
+        <section class="box-informacion">
+            <div class="info-default">
+                <img class="imagenes-muneco" src="imagenes/muneco.png">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>                                 
+        </section>
+        <div class="box-encriptado">
+            <textarea class="texto-encriptado" id="texto-encriptado" readonly></textarea>
+            <button onclick="" class="boton-copiar">Copiar</button>
         </div>
         
         <p class="minusculas">&#10071 Solo letras minúsculas y sin acentos</p>
 
         <div class="botones">
-            <button onclick="" class="boton-encriptar">Encriptar</button>
-            <button onclick="" class="boton-desencriptar">Desencriptar</button>
+            <button onclick="encriptar();" class="boton-encriptar">Encriptar</button>
+            <button onclick="desencriptar()" class="boton-desencriptar">Desencriptar</button>
         </div>
 
     </main>
+
+    <script src="app.js"></script>
     
 </body>
 </html>
