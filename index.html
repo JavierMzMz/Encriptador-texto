@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +19,16 @@
     <main>
         <div>
             <textarea class="input-texto" placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+        <div>
+            <textarea class="texto-encriptado"></textarea>
+            <ul class="informacion-default">
+                <li>
+                    <img class="imagenes-muneco" src="imagenes/muneco.png">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p class="mensaje-default">Ingresa el texto que desees encriptar o desencriptar.</p>                   
+                </li>
+            </ul>
         </div>
         
         <p class="minusculas">&#10071 Solo letras minúsculas y sin acentos</p>

@@ -32,27 +32,71 @@ body{
     line-height: 48px;
 }
 
+.texto-encriptado{
+    position: absolute;
+    margin: 40px 0 0 1300px;
+    width: 400px;
+    height: 860px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    resize: none;
+}
+
+.informacion-default{
+    position: absolute;
+    margin: 283px 0 0 1332px;
+    width: 336px;
+    height: 304px;
+
+}
+
+.informacion-default h2{
+    padding-top: 32px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #343A40;
+
+}
+
+.informacion-default p{
+    padding-top: 16px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #495057;
+
+
+}
+
 .minusculas{
     position: absolute;
-    margin: 851px 0 0 240px;
+    margin: 766px 0 0 240px;
     font-family: 'Inter';
     font-weight: 400;
     color:#495057;
     font-size: 12px;
     line-height: 18px;
     opacity: 80%;
+    gap: 8px;
 }
 
 .botones{
     position: absolute;
     display: flex;
-    margin: 885px 0 0 240px;
+    margin: 800px 0 0 240px;
     gap: 24px;
 }
 
 .boton-encriptar{
-    /*position: absolute;
-    margin: 885px 0 0 240px;*/
     width: 328px;
     height: fit-content;
     font-family:'Inter';
@@ -68,8 +112,6 @@ body{
 }
 
 .boton-desencriptar{
-    /*position: absolute;
-    margin: 885px 0 0 240px;*/
     width: 328px;
     height: fit-content;
     font-family:'Inter';
@@ -77,11 +119,12 @@ body{
     font-size: 16px;
     line-height: 19.36 px;
     text-align: center;
-    color: #FFFFFF;
+    color: #0A3871;
     padding: 24px;
     border-radius: 24px;
     border: none;
     background: #D8DFE8;
+    border: 1px solid #0A3871;
 }
 
 
