@@ -42,6 +42,8 @@ body{
     line-height: 48px;
 }
 
+
+
 .minusculas{
     margin-top: 20px;
     font-family: 'Inter';
@@ -129,7 +131,6 @@ body{
     font-family: Inter;
     font-size: 24px;
     font-weight: 700;
-    line-height: 29px;
     letter-spacing: 0em;
     color: #343A40;
 }
@@ -196,16 +197,18 @@ footer{
     color: lightgray;
     font-family: Inter;
     font-size: 12px;
+    font-style: italic;
     background: rgb(64, 40, 109);
     width: auto;
     height: 100%;
     text-align: center;
     padding: 40px;
+    margin: auto;
 }
 
 .imagenes-footer{
     display: inline-flex;
-    margin: 28px auto auto auto;
+    margin: 23px auto auto auto;
     gap: 30px;
 }
 
