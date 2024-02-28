@@ -23,8 +23,6 @@ function encriptar() {
                 }
             }
     habilitar();
-    
-
     document.querySelector('.texto-encriptado').value = texto_encriptado;   
 }
 
@@ -49,19 +47,42 @@ function desencriptar() {
      }
      
 
-     document.querySelector('.texto-encriptado').value = texto_usuario; 
+     document.querySelector('.texto-encriptado').value = texto_usuario;
+     habilitar(); 
     
 }
 
+function copiar() {
+    var texto_copy = document.querySelector('.texto-encriptado');
+    console.log(texto_copy);
+
+    texto_copy.select();
+    document.execCommand('copy');
+
+    deshabilitar();
+}
+
 function habilitar() {
-    var elemento = document.querySelector('.box-encriptado');
-    var elemento2 = document.querySelector('.texto-imagen');
+    var mostrar = document.querySelector('.box-encriptado');
+    var ocultar = document.querySelector('.texto-imagen');
+    var verificar = window.getComputedStyle(ocultar).display;
+    
+    if( verificar === 'block'){
+        mostrar.style.display = 'block';
+        ocultar.style.display = 'none';
+    }
+}
 
-    var res = window.getComputedStyle(elemento2).display;
-    console.log(res)
+function deshabilitar(){
+    var ocultar = document.querySelector('.box-encriptado');
+    var mostrar = document.querySelector('.texto-imagen');
+    var verificar = window.getComputedStyle(ocultar).display;
+    
+    document.querySelector('.input-texto').value = '';
+    document.querySelector('.texto-encriptado').value = '';
 
-    if( res === 'block'){
-        elemento.style.display = 'block';
-        elemento2.style.display = 'none';
+    if( verificar === 'block'){
+        mostrar.style.display = 'block';
+        ocultar.style.display = 'none';
     }
 }
