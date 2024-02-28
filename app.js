@@ -58,6 +58,7 @@ function habilitar() {
     var elemento2 = document.querySelector('.texto-imagen');
 
     var res = window.getComputedStyle(elemento2).display;
+    console.log(res)
 
     if( res === 'block'){
         elemento.style.display = 'block';
