@@ -1,61 +1,66 @@
 function encriptar() {
     let texto_usuario = document.querySelector('.input-texto').value;
     let texto_encriptado = '';
-    verificar(texto_usuario);
-    if(texto_usuario === false){
-        for (var i=0; i < texto_usuario.length; i++)
-            {
-                if(texto_usuario[i] == 'a'){
-                    texto_encriptado += 'ai'
-                }
-                else if(texto_usuario[i] == 'e'){ 
-                    texto_encriptado += 'enter'
-                }
-                else if(texto_usuario[i] == 'i'){
-                    texto_encriptado += 'imes'
-                }
-                else if(texto_usuario[i] == 'o'){
-                    texto_encriptado += 'ober'
-                }
-                else if(texto_usuario[i] == 'u'){
-                    texto_encriptado += 'ufat'
-                }
-                else{
-                    texto_encriptado += texto_usuario[i];
-                }
-            }
-    habilitar();
-    document.querySelector('.texto-encriptado').value = texto_encriptado;
+    if (texto_usuario === "" || texto_usuario.length === 0) {
+        swal("Error","El mensaje esta vacio.","error");
     }else{
-        alert("Revise su mensaje, no debe incluir mayusculas, acentos ni caracteres especiales.")
+        if(verificar(texto_usuario) === false){
+            for (var i=0; i < texto_usuario.length; i++)
+                {
+                    if(texto_usuario[i] == 'a'){
+                        texto_encriptado += 'ai'
+                    }
+                    else if(texto_usuario[i] == 'e'){ 
+                        texto_encriptado += 'enter'
+                    }
+                    else if(texto_usuario[i] == 'i'){
+                        texto_encriptado += 'imes'
+                    }
+                    else if(texto_usuario[i] == 'o'){
+                        texto_encriptado += 'ober'
+                    }
+                    else if(texto_usuario[i] == 'u'){
+                        texto_encriptado += 'ufat'
+                    }
+                    else{
+                        texto_encriptado += texto_usuario[i];
+                    }
+                }
+        habilitar();
+        document.querySelector('.texto-encriptado').value = texto_encriptado;
+        }else{
+            swal("Atención","Revise su mensaje, no debe incluir mayúsculas, acentos ni caracteres especiales.","warning");
+        }
     }
-       
 }
 
 function desencriptar() {
     let texto_usuario = document.querySelector('.input-texto').value;
-    
-
-    if(texto_usuario.includes('ai')){
-        texto_usuario = texto_usuario.replace(/ai/g,'a'); 
-     }
-     if(texto_usuario.includes('enter')){
-        texto_usuario = texto_usuario.replace(/enter/g,'e'); 
-     }
-     if(texto_usuario.includes('imes')){
-        texto_usuario = texto_usuario.replace(/imes/g,'i'); 
-     }
-     if(texto_usuario.includes('ober')){
-        texto_usuario = texto_usuario.replace(/ober/g,'o'); 
-     }
-     if(texto_usuario.includes('ufat')){
-        texto_usuario = texto_usuario.replace(/ufat/g,'u'); 
-     }
-     
-
-     document.querySelector('.texto-encriptado').value = texto_usuario;
-     habilitar(); 
-    
+    if (texto_usuario === "" || texto_usuario.length === 0) {
+        swal("Error","El mensaje esta vacio.","error");
+    }else{
+        if (verificar(texto_usuario) === false) {
+            if(texto_usuario.includes('ai')){
+                texto_usuario = texto_usuario.replace(/ai/g,'a'); 
+             }
+             if(texto_usuario.includes('enter')){
+                texto_usuario = texto_usuario.replace(/enter/g,'e'); 
+             }
+             if(texto_usuario.includes('imes')){
+                texto_usuario = texto_usuario.replace(/imes/g,'i'); 
+             }
+             if(texto_usuario.includes('ober')){
+                texto_usuario = texto_usuario.replace(/ober/g,'o'); 
+             }
+             if(texto_usuario.includes('ufat')){
+                texto_usuario = texto_usuario.replace(/ufat/g,'u'); 
+             }
+             document.querySelector('.texto-encriptado').value = texto_usuario;
+             habilitar();  
+        } else {
+            swal("Atención","Revise su mensaje, no debe incluir mayúsculas, acentos ni caracteres especiales.","warning");
+        } 
+    }  
 }
 
 function copiar() {
@@ -65,6 +70,13 @@ function copiar() {
     texto_copy.select();
     document.execCommand('copy');
 
+    swal({
+        icon: "success",
+        title: "Copiado",
+        text: "El texto se copio correctamente!",
+        timer: 1500,
+        buttons: false,
+    })
     deshabilitar();
 }
 
@@ -95,5 +107,6 @@ function deshabilitar(){
 
 function verificar(mensaje) {
     var mayus = /[A-Z0-9á-úÁ-Ú?`~@#$%^&*:;"'<>()=+]+()/.test(mensaje);
-    return console.log(mayus);
+    console.log(mayus);
+    return(mayus);
 }
