@@ -1,7 +1,9 @@
 function encriptar() {
     let texto_usuario = document.querySelector('.input-texto').value;
     let texto_encriptado = '';
-    for (var i=0; i < texto_usuario.length; i++)
+    verificar(texto_usuario);
+    if(texto_usuario === false){
+        for (var i=0; i < texto_usuario.length; i++)
             {
                 if(texto_usuario[i] == 'a'){
                     texto_encriptado += 'ai'
@@ -23,7 +25,11 @@ function encriptar() {
                 }
             }
     habilitar();
-    document.querySelector('.texto-encriptado').value = texto_encriptado;   
+    document.querySelector('.texto-encriptado').value = texto_encriptado;
+    }else{
+        alert("Revise su mensaje, no debe incluir mayusculas, acentos ni caracteres especiales.")
+    }
+       
 }
 
 function desencriptar() {
@@ -85,4 +91,9 @@ function deshabilitar(){
         mostrar.style.display = 'block';
         ocultar.style.display = 'none';
     }
+}
+
+function verificar(mensaje) {
+    var mayus = /[A-Z0-9á-úÁ-Ú?`~@#$%^&*:;"'<>()=+]+()/.test(mensaje);
+    return console.log(mayus);
 }
