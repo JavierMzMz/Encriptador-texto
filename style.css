@@ -229,5 +229,63 @@ footer{
 }
 
 
+@media screen and (max-width: 660px) {
+    .logo{
+        display: block;
+        margin: 40px auto;
+    }
+    .container{
+        display: block;
+    }
+    .input{
+        width: 100%;
+    }
 
+    .input-texto{
+        margin: 0 auto;
+        width: 80%;
+        height: 350px;
+        padding: 25px;
+        background: #dbdcdf;
+        border: none;
+        border-radius: 32px;
+        box-shadow: 0px 24px 32px -8px #00000014;
+        border-radius: 32px;
+    }
+
+    .botones{
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .box-informacion{
+        width: 100%;
+    }
+
+    .texto-imagen{
+        width: 80%;
+    }
+
+    .texto-encriptado{
+        width: 80%;
+        margin: 0 auto;
+        height: 350px;
+    }
+
+    .box-encriptado{
+        width: 100%;
+        display: flex;
+    }
+
+    .boton-copiar{
+        margin-top: 20px auto 20px auto;
+        width: 60%;
+    }
+
+    .footer{
+        display: block;
+        margin-top: 20px;
+    }
+}
 
