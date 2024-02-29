@@ -28,7 +28,7 @@ body{
     background:#F3F5FC;
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 48px;
     color: #0A3871;
     outline: none;
@@ -162,7 +162,7 @@ body{
     box-shadow: 0px 24px 32px -8px #00000014;
     resize: none;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     text-align: left;
     color: #495057;
@@ -228,8 +228,7 @@ footer{
     text-align: center;
 }
 
-
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 850px) {
     .logo{
         display: block;
         margin: 40px auto;
@@ -275,17 +274,16 @@ footer{
 
     .box-encriptado{
         width: 100%;
-        display: flex;
+        margin-bottom: 20px;
     }
 
     .boton-copiar{
         margin-top: 20px auto 20px auto;
-        width: 60%;
+        width: 40%;
     }
 
     .footer{
         display: block;
-        margin-top: 20px;
+
     }
 }
-
